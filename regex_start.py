@@ -55,7 +55,7 @@ class HelloName(tk.Tk):
             return "OK"
             
     def decorate_name(self, name):
-        return f"🌼{name.title()}🌼"  # 🌺 Returning the decorated name
+        return f"Hello, 🌿🌼 {name.title()} 🌼🌿!"  # 🌺 Returning the decorated name
 
     def error_handler(self, error_message):
         try:
