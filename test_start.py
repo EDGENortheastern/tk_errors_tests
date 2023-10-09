@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox  # 🔴 Important: Importing the messagebox feature from tkinter
-
+import re # 🔴 importing the regex module
 class HelloName(tk.Tk):
     def __init__(self):
         super().__init__()
@@ -49,13 +49,16 @@ class HelloName(tk.Tk):
         elif not self.length_check(name):
             self.error_handler("The name should be between 3 and 19 characters")
             return "Length check failed"
+        elif not self.pattern_check(name):
+            self.error_handler("The name can only contain letters")
+            return "Pattern check failed"
         else:
             decorated_name = self.decorate_name(name)  # 🌺 Decorating the name
             self.output_box.config(text=decorated_name)
             return "OK"
             
     def decorate_name(self, name):
-        return f"Hello, 🌼{name.title()}🌼!"  # 🌺 Returning the decorated name
+        return f"Hello, 🌿🌼 {name.title()} 🌼🌿!"  # 🌺 Returning the decorated name
 
     def error_handler(self, error_message):
         try:
@@ -68,6 +71,9 @@ class HelloName(tk.Tk):
     
     def length_check(self, name):
         return 3 < len(name) <= 20  # 📏 Checking the name's length
+    
+    def pattern_check(self, name):
+        return bool(re.fullmatch(r'[a-zA-Z-\s]+', name))
 
 if __name__ == "__main__":
     app = HelloName()
