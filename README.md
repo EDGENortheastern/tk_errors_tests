@@ -15,7 +15,7 @@
 
 `messagebox` from `tkinter.messagebox` is imported for potential use in displaying pop-up errors.
 
-HelloName Class Definition:
+### `HelloName()` Class Definition
 
 This class, `HelloName()`, inherits from `tk.Tk()` which is the main class for creating tkinter applications.
 
@@ -24,5 +24,7 @@ The `__init__()` method (the constructor) initializes the application window and
 `self.title(...)`, `self.geometry(...)`, and other configurations set up the main application window.
 
 The get_name method is a placeholder function: it is called when the submit button is clicked. Currently, it does nothing (indicated by the pass statement).
+
+### The main guard `if __name__ == "__main__":`
 
 The `if __name__ == "__main__":` block ensures the application runs when the script is executed directly. It initializes an instance of the `HelloName()` class and enters the main event loop with `app.mainloop().`
