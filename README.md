@@ -1,4 +1,4 @@
-# Implementing Error Handling and Testing in Tkinter apps
+# Error Handling and Testing in Tkinter apps
 
 ## `starter.py`
 
