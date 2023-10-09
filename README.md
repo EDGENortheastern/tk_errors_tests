@@ -1,2 +1,4 @@
-# tk_errors_tests
-tk_errors_tests
+# Implementing Error Handling and Testing in Tkinter apps
+
+
+
