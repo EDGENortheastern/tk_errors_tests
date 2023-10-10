@@ -1,9 +1,14 @@
 import tkinter as tk
 from tkinter import messagebox  # 🔴 Important: Importing the messagebox feature from tkinter
 import re # 🔴 importing the regex module
+
 class HelloName(tk.Tk):
-    def __init__(self):
+    def __init__(self, init_gui=True):
         super().__init__()
+
+        if not init_gui:
+            self.destroy()  # Immediately destroy the GUI window if init_gui is False
+            return
 
         self.title("Hello Name")  # 📛 Setting the window title
         self.geometry("600x400+200+200")  # 📐 Setting the window size and position
@@ -78,3 +83,6 @@ class HelloName(tk.Tk):
 if __name__ == "__main__":
     app = HelloName()
     app.mainloop()
+
+
+
