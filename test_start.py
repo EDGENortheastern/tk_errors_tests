@@ -3,12 +3,8 @@ from tkinter import messagebox  # 🔴 Important: Importing the messagebox featu
 import re # 🔴 importing the regex module
 
 class HelloName(tk.Tk):
-    def __init__(self, init_gui=True):
+    def __init__(self):
         super().__init__()
-
-        if not init_gui:
-            self.destroy()  # Immediately destroy the GUI window if init_gui is False
-            return
 
         self.title("Hello Name")  # 📛 Setting the window title
         self.geometry("600x400+200+200")  # 📐 Setting the window size and position
